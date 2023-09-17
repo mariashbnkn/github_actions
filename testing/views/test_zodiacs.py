@@ -1,9 +1,5 @@
-from flask import session
-
 from app import create_zodiac
 from models import Zodiacs, db
-
-# from flask import Markup
 
 
 def test_zodiac_details_status_code(client):
