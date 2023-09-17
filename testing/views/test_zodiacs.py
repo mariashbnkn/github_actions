@@ -1,11 +1,13 @@
 from flask import session
 
+from app import create_zodiac
 from models import Zodiacs, db
 
 # from flask import Markup
 
 
 def test_zodiac_details_status_code(client):
+    create_zodiac()
     zodiac = Zodiacs(name="name", date_bth="1999-12-12", id_zodiac=3, zodiac_name="zodiac_name")
     db.session.add(zodiac)
     db.session.commit()
