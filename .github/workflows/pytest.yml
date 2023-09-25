@@ -20,8 +20,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
         if [ -f pyproject.toml ]; then poetry install; fi
+    - name: List installed packages
+      run: poetry run pip freeze
     - name: Test with pytest
       run: |
         pytest
