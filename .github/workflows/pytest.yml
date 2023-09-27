@@ -16,14 +16,9 @@ jobs:
       with:
         python-version: "3.10"
     - name: Install Poetry
-      uses: snok/install-poetry@v1
-    - name: Install Poetry2
       run: |
-        pip install poetry
-#        python -m pip install --upgrade pip
-#        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: List installed packages
-      run: poetry run pip freeze
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Docker up
       run: | 
         docker compose up -d
