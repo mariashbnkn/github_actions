@@ -23,8 +23,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 #    - name: List installed packages
 #      run: poetry run pip freeze
-#    - name: Docker up
-#      run: docker compose up -d
+    - name: Docker up
+      run: docker compose up -d
     - name: Test with pytest
       run: |
         pytest
