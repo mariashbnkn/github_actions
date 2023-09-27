@@ -17,11 +17,9 @@ jobs:
         python-version: "3.10"
     - name: Install Poetry
       uses: snok/install-poetry@v1
+    - name: Install Poetry2
       run: |
         pip install poetry
-#    - name: Install dependencies
-#      run: |
-#        poetry install
 #        python -m pip install --upgrade pip
 #        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: List installed packages
